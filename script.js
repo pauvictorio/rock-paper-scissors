@@ -45,7 +45,7 @@ function game() {
     
     console.log(playRound(playerSelection, computerSelection));
   }
-  console.log("Your score: " + score.playerScore);
+  console.log("\nYour score: " + score.playerScore);
   console.log("Computer's score: " + score.computerScore);
 }
 
