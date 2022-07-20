@@ -10,7 +10,6 @@ function getComputerChoice(choices) {
 }
 
 function playRound(playerSelection, computerSelection) {
-
   if (playerSelection != computerSelection) {
     if (playerSelection == CHOICES[0] && computerSelection == CHOICES[2]) {
       score.playerScore += 1;
@@ -36,11 +35,9 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-  
   let gameRounds = parseInt(prompt("Enter the number of rounds you want to play:"))
 
   for (let i = 0; i < gameRounds; i++) {
-
     let playerSelection = "";
     let computerSelection = getComputerChoice(CHOICES);
 
@@ -50,6 +47,7 @@ function game() {
     
     console.log(playRound(playerSelection, computerSelection));
   }
+  
   console.log("\nYour score: " + score.playerScore);
   console.log("Computer's score: " + score.computerScore);
   console.log("You tied with the Computer for " + score.tieScore + " rounds");
