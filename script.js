@@ -34,7 +34,10 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-  for (let i = 0; i < 5; i++) {
+  
+  let gameRounds = parseInt(prompt("Enter the number of rounds you want to play:"))
+
+  for (let i = 0; i < gameRounds; i++) {
 
     let playerSelection = "";
     let computerSelection = getComputerChoice(CHOICES);
