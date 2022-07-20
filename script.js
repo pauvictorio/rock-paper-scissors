@@ -2,6 +2,7 @@ const CHOICES = ["ROCK", "PAPER", "SCISSORS"];
 const score = {
                 playerScore: 0,
                 computerScore: 0,
+                tieScore: 0
               }
 
 function getComputerChoice(choices) {
@@ -29,6 +30,7 @@ function playRound(playerSelection, computerSelection) {
     }    
   } 
   else {
+    score.tieScore += 1;
     return "Tie! " + playerSelection + " DRAWS " + computerSelection + "!";
   }
 }
@@ -43,13 +45,14 @@ function game() {
     let computerSelection = getComputerChoice(CHOICES);
 
     while (!(CHOICES.includes(playerSelection))) {
-      playerSelection = prompt("Enter your choice:").toUpperCase();
+      playerSelection = prompt("Rock, Paper, Scissors?").toUpperCase();
     }
     
     console.log(playRound(playerSelection, computerSelection));
   }
   console.log("\nYour score: " + score.playerScore);
   console.log("Computer's score: " + score.computerScore);
+  console.log("You tied with the Computer for " + score.tieScore + " rounds");
 }
 
 game();
