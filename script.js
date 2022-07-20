@@ -1,5 +1,4 @@
 const CHOICES = ["ROCK", "PAPER", "SCISSORS"];
-let playerChoice = "";
 
 function getComputerChoice(choices) {
   return choices[Math.floor(Math.random() * 100) % 3];
@@ -26,8 +25,18 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-while (!(CHOICES.includes(playerChoice))) {
-  playerChoice = prompt("Enter your choice:").toUpperCase();
+function game() {
+  for (let i = 0; i < 5; i++) {
+
+    let playerSelection = "";
+    let computerSelection = getComputerChoice(CHOICES);
+
+    while (!(CHOICES.includes(playerSelection))) {
+      playerSelection = prompt("Enter your choice:").toUpperCase();
+    }
+    
+    console.log(playRound(playerSelection, computerSelection));
+  }
 }
 
-console.log(playRound(playerChoice, getComputerChoice(CHOICES)));
+game();
