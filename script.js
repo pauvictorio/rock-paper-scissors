@@ -37,7 +37,7 @@ function playRound(playerSelection, computerSelection) {
 function displayScore(score) {
   document.querySelector('#user').innerText = score.playerScore;
   document.querySelector('#computer').innerText = score.computerScore;
-  document.querySelector('span').innerText = score.tieScore;
+  document.querySelector('#tie').innerText = score.tieScore;
 }
  
 const buttons = document.querySelectorAll('button');
