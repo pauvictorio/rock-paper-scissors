@@ -33,7 +33,7 @@ function playRound(playerSelection, computerSelection) {
     return "Tie! " + playerSelection + " DRAWS " + computerSelection + "!"; 
   }
 }
-
+ 
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach(button => button.addEventListener('click', () => {
