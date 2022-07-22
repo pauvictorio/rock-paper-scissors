@@ -12,6 +12,7 @@ body {
 
 ul {
   list-style-position: inside;
+  list-style: none;
   display: flex;
   justify-content: center;
   padding-left: 0;
@@ -44,5 +45,9 @@ section div:nth-of-type(2) {
 }
 
 #rock {
-  padding: 0px 12px;
+  padding: 0px 24px;
+}
+
+#paper {
+  padding: 0px 22px;
 }
