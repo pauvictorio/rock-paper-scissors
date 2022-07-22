@@ -30,27 +30,16 @@ function playRound(playerSelection, computerSelection) {
   } 
   else {
     score.tieScore += 1;
-    return "Tie! " + playerSelection + " DRAWS " + computerSelection + "!";
+    return "Tie! " + playerSelection + " DRAWS " + computerSelection + "!"; 
   }
 }
 
-function game() {
-  let gameRounds = parseInt(prompt("Enter the number of rounds you want to play:"))
+const buttons = document.querySelectorAll('button');
 
-  for (let i = 0; i < gameRounds; i++) {
-    let playerSelection = "";
-    let computerSelection = getComputerChoice(CHOICES);
+buttons.forEach(button => button.addEventListener('click', () => {
+  const playerSelection = button.id.toUpperCase();
+  const computerSelection = getComputerChoice(CHOICES);
+  const round = playRound(playerSelection, computerSelection);
 
-    while (!(CHOICES.includes(playerSelection))) {
-      playerSelection = prompt("Rock, Paper, Scissors?").toUpperCase();
-    }
-    
-    console.log(playRound(playerSelection, computerSelection));
-  }
-  
-  console.log("\nYour score: " + score.playerScore);
-  console.log("Computer's score: " + score.computerScore);
-  console.log("You tied with the Computer for " + score.tieScore + " rounds");
-}
-
-game();
+  document.querySelector('h2').innerText = round;
+  }));
