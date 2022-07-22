@@ -43,6 +43,10 @@ function displayScore(score) {
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach(button => button.addEventListener('click', () => {
+  if (button.id === 'reset') {
+    location.reload();
+    return;
+  }
   const playerSelection = button.id.toUpperCase();
   const computerSelection = getComputerChoice(CHOICES);
   const round = playRound(playerSelection, computerSelection);
