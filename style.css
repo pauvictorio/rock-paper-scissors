@@ -10,16 +10,18 @@ body {
   align-items: center;
 }
 
-ul {
-  list-style-position: inside;
-  list-style: none;
+header div {
   display: flex;
-  justify-content: center;
-  padding-left: 0;
-  gap: 120px;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+header span {
+  margin: 0 8px;
 }
 
 h1 {
+  text-align: center;
   padding: 56px;
 }
 
@@ -30,11 +32,14 @@ section {
 }
 
 section div:nth-of-type(1) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 56px;
 }
 
 section button {
-  padding: 0px 8px;
+  padding: 0 8px;
   margin: 8px;
 }
 
@@ -50,4 +55,9 @@ section div:nth-of-type(2) {
 
 #paper {
   padding: 0px 22px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 100px;
 }
