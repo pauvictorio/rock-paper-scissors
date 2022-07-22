@@ -48,6 +48,6 @@ buttons.forEach(button => button.addEventListener('click', () => {
   const round = playRound(playerSelection, computerSelection);
 
   document.querySelector('h2').innerText = round;
-  console.log(score);
+
   displayScore(score);
   }));
