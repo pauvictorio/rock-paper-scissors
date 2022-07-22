@@ -33,6 +33,12 @@ function playRound(playerSelection, computerSelection) {
     return "Tie! " + playerSelection + " DRAWS " + computerSelection + "!"; 
   }
 }
+
+function displayScore(score) {
+  document.querySelector('#user').innerText = score.playerScore;
+  document.querySelector('#computer').innerText = score.computerScore;
+  document.querySelector('span').innerText = score.tieScore;
+}
  
 const buttons = document.querySelectorAll('button');
 
@@ -42,4 +48,6 @@ buttons.forEach(button => button.addEventListener('click', () => {
   const round = playRound(playerSelection, computerSelection);
 
   document.querySelector('h2').innerText = round;
+  console.log(score);
+  displayScore(score);
   }));
