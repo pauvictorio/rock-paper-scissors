@@ -13,20 +13,18 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection != computerSelection) {
     if (playerSelection == CHOICES[0] && computerSelection == CHOICES[2]) {
       score.playerScore += 1;
-      return "Your " + playerSelection + " had BEATEN the Computer's " + computerSelection  + "!";
     } 
     else if (playerSelection == CHOICES[1] && computerSelection == CHOICES[0]) {
       score.playerScore += 1;
-      return "Your " + playerSelection + " had BEATEN the Computer's " + computerSelection  + "!";
     } 
     else if (playerSelection == CHOICES[2] && computerSelection == CHOICES[1]) {
       score.playerScore += 1;
-      return "Your " + playerSelection + " had BEATEN the Computer's " + computerSelection  + "!";
     } 
     else {
       score.computerScore += 1;
       return "Your " + playerSelection + " had LOST to the Computer's " + computerSelection  + "!";
-    }    
+    }
+    return "Your " + playerSelection + " had BEATEN the Computer's " + computerSelection  + "!";
   } 
   else {
     score.tieScore += 1;
